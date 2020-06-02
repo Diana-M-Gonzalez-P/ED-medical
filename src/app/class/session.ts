@@ -5,8 +5,8 @@ export class Session {
         }
       }
     validateLogin(router) {
-        if (localStorage.getItem('token')) {
-            router.navigateByUrl('/home');
+        if (!localStorage.getItem('token')) {
+            router.navigateByUrl('/login');
         } else {
         }
     }

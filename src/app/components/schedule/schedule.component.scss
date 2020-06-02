@@ -1,0 +1,23 @@
+.schedule {
+    margin: 3rem 0;
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        .schedule__img {
+            width: 40%;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .schedule__form {
+            width: 55%;
+            mat-form-field {
+                width: 100%;
+            }
+            button {
+                margin-top: 2rem;
+            }
+        }
+    }
+}

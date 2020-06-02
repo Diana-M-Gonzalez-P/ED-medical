@@ -48,3 +48,19 @@ mat-toolbar {
         }
     }
 }
+
+mat-datepicker-toggle {
+    button.mat-button-base {
+        background-color: transparent;
+    }
+}
+
+mat-calendar-header {
+    button.mat-button-base {
+        background-color: transparent;
+        border-color: $blue;
+        span {
+            color: $blue;
+        }
+    }
+}

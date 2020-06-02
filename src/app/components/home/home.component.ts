@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
+import { Session } from '../../class/session';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,12 +11,15 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   services: any;
+  session = new Session();
 
   constructor(
-    private api: ApiService
+    private api: ApiService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
+    this.session.validateUser(this.router);
     this.listServices();
   }
 

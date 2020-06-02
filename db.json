@@ -11,31 +11,71 @@
         "health": ""
     },
     "services": [{
-        "id": 1,
-        "type": "schedule",
-        "name": "Agenda tu cita"
-    }, {
-        "id": 2,
-        "type": "doctor",
-        "name": "Consultar de Especialistas"
-    }, {
-        "id": 3,
-        "type": "surgery",
-        "name": "Consultar de Cirugias"
-    }, {
-        "id": 4,
-        "type": "doctor-home",
-        "name": "Medico en Casa"
-    }],
+            "id": 1,
+            "type": "schedule",
+            "name": "Agenda tu cita"
+        },
+        {
+            "id": 2,
+            "type": "doctor",
+            "name": "Consultar de Especialistas"
+        },
+        {
+            "id": 3,
+            "type": "surgery",
+            "name": "Consultar de Cirugias"
+        },
+        {
+            "id": 4,
+            "type": "doctor-home",
+            "name": "Medico en Casa"
+        }
+    ],
+    "appointment": [{
+            "id": "",
+            "toDay": "",
+            "specialty": "",
+            "doctor": "",
+            "program": ""
+        },
+        {
+            "toDay": "2020-06-02T22:23:50.019Z",
+            "specialty": 2,
+            "doctor": 1235,
+            "program": "2020-06-02T05:00:00.000Z",
+            "id": "Cjm4Rrh"
+        }
+    ],
     "medi-general": [{
-        "id": 1,
-        "name": "json-server"
-    }],
+            "id": 1,
+            "name": "Medicina General"
+        },
+        {
+            "id": 2,
+            "name": "Cita Prioritaria"
+        },
+        {
+            "id": 3,
+            "name": "Pyp"
+        }
+    ],
     "doctor": [{
-        "cc": 1,
-        "name": "json-server",
-        "specialty": "json-server"
-    }],
+            "dni": 1234,
+            "name": "Ana Lopez"
+        },
+        {
+            "dni": 1235,
+            "name": "Juan Ramirez"
+        },
+        {
+            "dni": 1236,
+            "name": "Luis Gonzalez"
+        },
+        {
+            "dni": 1237,
+            "name": "Olga Prieto"
+        }
+    ],
     "specialty": [{
         "id": 1,
         "name": "json-server",
