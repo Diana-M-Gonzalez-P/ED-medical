@@ -12,6 +12,7 @@ export class ApiService {
 
   urlPublic = 'http://localhost:3000/';
   private urlLogin = this.urlPublic + 'user';
+  private urlServices = this.urlPublic + 'services';
 
   constructor( private http: HttpClient) {
   }
@@ -43,5 +44,9 @@ export class ApiService {
 
   logout() {
     localStorage.removeItem('token');
+  }
+
+  getServices(){
+      return this.http.get(this.urlServices);
   }
 }

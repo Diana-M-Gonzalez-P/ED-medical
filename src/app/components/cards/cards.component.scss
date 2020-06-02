@@ -1,0 +1,39 @@
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    &__content {
+        width: 45%;
+        flex: 1 1 45%;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        .card__image {
+            width: 150px;
+            height: 150px;
+            border-radius: 0;
+            margin: auto;
+            &.schedule {
+                background: url('/assets/icons/vaccine.svg') no-repeat;
+                background-size: contain;
+            }
+            &.doctor {
+                background: url('/assets/icons/professions-and-jobs.svg') no-repeat;
+                background-size: contain;
+            }
+            &.surgery {
+                background: url('/assets/icons/surgeon.svg') no-repeat;
+                background-size: contain;
+            }
+            &.doctor-home {
+                background: url('/assets/icons/doctor.svg') no-repeat;
+                background-size: contain;
+            }
+        }
+        p {
+            font-size: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+}

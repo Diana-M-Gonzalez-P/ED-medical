@@ -12,8 +12,20 @@
     },
     "services": [{
         "id": 1,
-        "type": "json-server",
-        "name": "typicode"
+        "type": "schedule",
+        "name": "Agenda tu cita"
+    }, {
+        "id": 2,
+        "type": "doctor",
+        "name": "Consultar de Especialistas"
+    }, {
+        "id": 3,
+        "type": "surgery",
+        "name": "Consultar de Cirugias"
+    }, {
+        "id": 4,
+        "type": "doctor-home",
+        "name": "Medico en Casa"
     }],
     "medi-general": [{
         "id": 1,

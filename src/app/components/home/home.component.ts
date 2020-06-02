@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  services: any;
+
+  constructor(
+    private api: ApiService
+  ) { }
 
   ngOnInit(): void {
+    this.listServices();
   }
 
+  listServices(){
+    this.api.getServices()
+    .subscribe( resp => {
+      this.services = resp;
+      for (const key in resp) {
+        if (resp.hasOwnProperty(key)) {
+          const element = resp[key];
+          switch (element.type) {
+            case 'schedule':
+              element.link = '/agendar';
+              break;
+            case 'doctor':
+              element.link = '/consultar-especialista';
+              break;
+            case 'surgery':
+              element.link = '/cirugia';
+              break;
+            case 'doctor-home':
+              element.link = '/medico-en-casa';
+              break;
+            default:
+              break;
+          }
+        }
+      }
+    });
+  }
 }

@@ -4,6 +4,7 @@ import { UserModel } from '../../model/user.model';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MyErrorStateMatcher } from 'src/app/class/error';
 import { Router } from '@angular/router';
+import { Session } from '../../class/session';
 
 @Component({
   selector: 'app-login',
@@ -13,6 +14,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   user = new UserModel();
+  session = new Session();
   formLogin: FormGroup;
   matcher = new MyErrorStateMatcher();
   respond: string;
@@ -24,7 +26,7 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.validateToken();
+    this.session.validateLogin(this.router);
     this.formLogin = this.formBuilder.group({
       dni: ['', [Validators.required, Validators.maxLength(10), Validators.pattern('[a-zA-Z0-9-]+')]],
       password: ['', [Validators.required]]
@@ -38,7 +40,6 @@ export class LoginComponent implements OnInit {
     this.user.password = this.formLogin.get('password').value;
     this.api.getLogin(this.user)
     .subscribe( resp => {
-      console.log(resp);
       // tslint:disable-next-line: no-string-literal
       if ( this.user.dni === resp['dni'] && this.user.password === resp['password']){
         this.router.navigate( ['/home'] );
@@ -46,11 +47,5 @@ export class LoginComponent implements OnInit {
         this.respond = 'Cedula o clave incorrectas';
       }
     });
-  }
-
-  validateToken() {
-    if (localStorage.getItem('token')) {
-      this.router.navigateByUrl('/home');
-    }
   }
 }
