@@ -1,0 +1,49 @@
+{
+    "user": [{
+        "dni": 1049634958,
+        "name": "Juan David",
+        "last-name": "Perez Lopez",
+        "email": "juan@email.com",
+        "direction": "calle34 #05 -13",
+        "tel": "303948573",
+        "password": "a1234",
+        "health": ""
+    }],
+    "services": [{
+        "id": 1,
+        "type": "json-server",
+        "name": "typicode"
+    }],
+    "medi-general": [{
+        "id": 1,
+        "name": "json-server"
+    }],
+    "doctor": [{
+        "cc": 1,
+        "name": "json-server",
+        "specialty": "json-server"
+    }],
+    "specialty": [{
+        "id": 1,
+        "name": "json-server",
+        "doctor": "json-server"
+    }],
+    "surgery": [{
+        "id": 1,
+        "name": "json-server",
+        "cost": "json-server"
+    }],
+    "posts": [{
+        "id": 1,
+        "title": "json-server",
+        "author": "typicode"
+    }],
+    "comments": [{
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+    }],
+    "profile": {
+        "name": "typicode"
+    }
+}

@@ -1,0 +1,16 @@
+/*** Resposive ***/
+
+$sv:768px;
+$mv:1024px;
+$lv:1279px;
+@mixin mobile {
+    @media (max-width: #{($sv - 1)}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$sv}) and (max-width: #{$mv}) {
+        @content;
+    }
+}

@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    &__logo {
+        width: 40px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__user {
+        button {
+            border: 0;
+            background: transparent;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import '../../../scss/variables.scss';
+.login {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: $yellow;
+    mat-card {
+        position: absolute;
+        width: 40%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 3rem 2rem;
+        text-align: center;
+        mat-card-header {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            .login__img {
+                position: absolute;
+                width: 15%;
+                top: -7rem;
+                left: 50%;
+                transform: translateX(-50%);
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            mat-card-title {
+                text-align: center;
+                font-size: 2rem;
+                color: $blue;
+            }
+        }
+        mat-card-content {
+            form {
+                mat-form-field {
+                    width: 100%;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+// Styles modified for Angular Material theme
+@import 'variables.scss';
+@import 'viewport.scss';
+.mat-typography {
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        font-family: 'Cabin', sans-serif;
+    }
+    h2 {
+        font-size: 2rem;
+        font-style: italic;
+        font-family: 'Cabin', sans-serif;
+    }
+    p {}
+    a {}
+}
+
+mat-form-field {
+    span {
+        font-family: 'Cabin', sans-serif;
+    }
+    &.mat-form-field.mat-focused {
+        .mat-form-field-ripple {
+            background-color: $blue;
+        }
+    }
+}
+
+button {
+    &.mat-button-base {
+        background-color: $blue-light;
+        span {
+            color: $white;
+        }
+    }
+}
+
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    button {
+        cursor: pointer;
+        .mat-icon {
+            width: 50px;
+            height: 50px;
+            font-size: 50px;
+        }
+    }
+}

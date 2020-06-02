@@ -1,0 +1,19 @@
+@import '../../../scss/variables.scss';
+.home {
+    &__banner {
+        position: absolute;
+        width: 100%;
+        height: 20rem;
+        right: 50%;
+        left: 0;
+        background: url('/assets/img/banner.jpg') no-repeat;
+        background-size: cover;
+    }
+    &__items {
+        padding-top: 20rem;
+        h1 {
+            margin: 3rem 0;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    height: 10rem;
+    mat-toolbar {
+        height: 100%;
+    }
+    &__logo {
+        width: 40px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__info {
+        p {
+            margin-left: 1.5rem;
+            margin-bottom: 0;
+        }
+    }
+}
