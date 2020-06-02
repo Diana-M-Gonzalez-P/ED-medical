@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "app-davinci"
+    }
+  },
+  "defaultProject": "app-davinci",
+  "cli": {
+    "analytics": "ec87789e-a107-4328-8bb1-fd2fdd1e26a1"
+  }
 }
