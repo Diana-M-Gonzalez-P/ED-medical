@@ -1,6 +1,7 @@
 {
-    "user": [{
-        "dni": 1049634958,
+    "user": {
+        "token": "1234userJuan",
+        "dni": "1049634958",
         "name": "Juan David",
         "last-name": "Perez Lopez",
         "email": "juan@email.com",
@@ -8,7 +9,7 @@
         "tel": "303948573",
         "password": "a1234",
         "health": ""
-    }],
+    },
     "services": [{
         "id": 1,
         "type": "json-server",

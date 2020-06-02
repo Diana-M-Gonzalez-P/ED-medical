@@ -7,17 +7,28 @@
             <mat-card-title>Inicio de sesión</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <form action="" class="fields-container">
+            <form action="" class="fields-container" [formGroup]="formLogin">
                 <mat-form-field>
-                    <input matInput placeholder="Correo">
+                    <input matInput placeholder="Cedula" [errorStateMatcher]="matcher" formControlName="dni" maxlength='10' [ngClass]="{ 'is-invalid':  formL.dni.errors }">
+                    <mat-error *ngIf="!!formL['dni'].errors">
+                        <mat-error *ngIf="!!formL['dni'].errors.required">Este campo es requerido</mat-error>
+                        <mat-error *ngIf="!!formL['dni'].errors.pattern">Este campo no acepta caracteres especiales</mat-error>
+                        <mat-error *ngIf="!!formL['dni'].errors.maxlength">Este campo debe ser de máximo 10 caracteres</mat-error>
+                    </mat-error>
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput placeholder="Contraseña">
+                    <input type="password" name="password" id="" matInput placeholder="Clave" [errorStateMatcher]="matcher" formControlName="password" [ngClass]="{ 'is-invalid': formL.password.errors}" autocomplete="off">
+                    <mat-error *ngIf="!!formL['password'].errors">
+                        <mat-error *ngIf="!!formL['password'].errors.required">Este campo es requerido</mat-error>
+                    </mat-error>
                 </mat-form-field>
             </form>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button>Ingresar</button>
+            <button mat-raised-button clic (click)="loginUser()">Ingresar</button>
         </mat-card-actions>
+        <div class="message-error">
+            <mat-error>{{respond}}</mat-error>
+        </div>
     </mat-card>
 </section>
