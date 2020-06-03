@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '../../services/api.service';
 import { Session } from '../../class/session';
 import { AppointmentModel } from '../../model/appointment.model';
@@ -81,7 +81,6 @@ export class ScheduleComponent implements OnInit {
     if ( form.valid ) {
       this.api.postAppointment(this.appointment)
       .subscribe( resp => {
-          console.log(resp);
           Swal.fire({
             icon: 'success',
             title: 'Exito',

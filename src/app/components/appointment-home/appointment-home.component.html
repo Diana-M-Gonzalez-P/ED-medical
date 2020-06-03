@@ -1,35 +1,58 @@
 <section class="home">
     <div class="home__info">
-        <h2>Medico en <i class="fa fa-caret-square-o-down" aria-hidden="true"></i></h2>
-        <p>Nombre de usuario</p>
+        <h2>Medico en casa</h2>
+        <p>{{nameComplite}}</p>
+        <p>CC {{dni}}</p>
     </div>
     <div class="home__content">
         <div class="home__img">
-            <img src="" alt="">
+            <img src="assets/img/image1.png" alt="image">
         </div>
         <div class="home__form">
-            <form action="" class="fields-container">
+            <form action="" class="fields-container" [formGroup]="formHome" (ngSubmit)="save( form )" #form="ngForm">
                 <mat-form-field class="example-full-width">
-                    <mat-label>Nombre</mat-label>
-                    <input matInput placeholder="Ex. Pizza" value="Sushi">
+                    <mat-label>Nombres</mat-label>
+                    <input matInput [value]="name" formControlName="name" [errorStateMatcher]="matcher" [ngClass]="{ 'is-invalid':  formH.name.errors }">
+                    <mat-error *ngIf="!!formH['name'].errors">
+                        <mat-error *ngIf="!!formH['name'].errors.required">Este campo es requerido</mat-error>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Apellidos</mat-label>
+                    <input matInput [value]="lastName" formControlName="lastname" [errorStateMatcher]="matcher" [ngClass]="{ 'is-invalid':  formH.lastname.errors }">
+                    <mat-error *ngIf="!!formH['lastname'].errors">
+                        <mat-error *ngIf="!!formH['lastname'].errors.required">Este campo es requerido</mat-error>
+                    </mat-error>
                 </mat-form-field>
                 <mat-form-field class="example-full-width">
                     <mat-label>Cedula</mat-label>
-                    <input matInput placeholder="Ex. Pizza" value="Sushi">
+                    <input matInput [value]="dni" formControlName="dni" [errorStateMatcher]="matcher" [ngClass]="{ 'is-invalid':  formH.dni.errors }">
+                    <mat-error *ngIf="!!formH['dni'].errors">
+                        <mat-error *ngIf="!!formH['dni'].errors.required">Este campo es requerido</mat-error>
+                    </mat-error>
                 </mat-form-field>
                 <mat-form-field class="example-full-width">
                     <mat-label>Correo</mat-label>
-                    <input matInput placeholder="Ex. Pizza" value="Sushi">
+                    <input matInput [value]="email" formControlName="email" [errorStateMatcher]="matcher" [ngClass]="{ 'is-invalid':  formH.email.errors }">
+                    <mat-error *ngIf="!!formH['email'].errors">
+                        <mat-error *ngIf="!!formH['email'].errors.required">Este campo es requerido</mat-error>
+                    </mat-error>
                 </mat-form-field>
                 <mat-form-field class="example-full-width">
                     <mat-label>Direccion</mat-label>
-                    <input matInput placeholder="Ex. Pizza" value="Sushi">
+                    <input matInput [value]="direction" formControlName="adress" [errorStateMatcher]="matcher" [ngClass]="{ 'is-invalid':  formH.adress.errors }">
+                    <mat-error *ngIf="!!formH['adress'].errors">
+                        <mat-error *ngIf="!!formH['adress'].errors.required">Este campo es requerido</mat-error>
+                    </mat-error>
                 </mat-form-field>
                 <mat-form-field class="example-full-width">
                     <mat-label>Sistomas</mat-label>
-                    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+                    <textarea matInput formControlName="symptoms" [errorStateMatcher]="matcher" [ngClass]="{ 'is-invalid':  formH.symptoms.errors }"></textarea>
+                    <mat-error *ngIf="!!formH['symptoms'].errors">
+                        <mat-error *ngIf="!!formH['symptoms'].errors.required">Este campo es requerido</mat-error>
+                    </mat-error>
                 </mat-form-field>
-                <button>Enviar</button>
+                <button mat-raised-button>Enviar</button>
             </form>
         </div>
     </div>

@@ -3,6 +3,8 @@ import { ApiService } from '../../services/api.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { DoctorModel } from '../../model/doctor.model';
 import { MyErrorStateMatcher } from 'src/app/class/error';
+import { Session } from 'src/app/class/session';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-consult-doctor',
@@ -19,14 +21,16 @@ export class ConsultDoctorComponent implements OnInit {
   doctor = new DoctorModel();
   formDoctor: FormGroup;
   matcher = new MyErrorStateMatcher();
-
+  session = new Session();
 
   constructor(
     private api: ApiService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
+    this.session.validateLogin(this.router);
     this.getInfoUser();
     this.listSpecialty();
     this.formDoctor = this.formBuilder.group({

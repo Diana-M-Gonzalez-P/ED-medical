@@ -32,6 +32,13 @@
         }
     ],
     "appointment": [{
+        "id": "",
+        "toDay": "",
+        "specialty": "",
+        "doctor": "",
+        "program": ""
+    }],
+    "docotor-home": [{
             "id": "",
             "toDay": "",
             "specialty": "",
@@ -39,20 +46,10 @@
             "program": ""
         },
         {
-            "toDay": "2020-06-03T15:42:15.222Z",
-            "specialty": 1,
-            "doctor": 1235,
-            "program": "2020-06-03T05:00:00.000Z",
-            "id": "zFCYa5P"
+            "health": "jhvjhvhv",
+            "id": "YcFKomd"
         }
     ],
-    "docotor-home": [{
-        "id": "",
-        "toDay": "",
-        "specialty": "",
-        "doctor": "",
-        "program": ""
-    }],
     "medi-general": [{
             "id": 1,
             "name": "Medicina General"
