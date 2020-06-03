@@ -32,20 +32,19 @@
         }
     ],
     "appointment": [{
-            "id": "",
-            "toDay": "",
-            "specialty": "",
-            "doctor": "",
-            "program": ""
-        },
-        {
-            "toDay": "2020-06-02T22:23:50.019Z",
-            "specialty": 2,
-            "doctor": 1235,
-            "program": "2020-06-02T05:00:00.000Z",
-            "id": "Cjm4Rrh"
-        }
-    ],
+        "id": "",
+        "toDay": "",
+        "specialty": "",
+        "doctor": "",
+        "program": ""
+    }],
+    "docotor-home": [{
+        "id": "",
+        "toDay": "",
+        "specialty": "",
+        "doctor": "",
+        "program": ""
+    }],
     "medi-general": [{
             "id": 1,
             "name": "Medicina General"
@@ -77,14 +76,103 @@
         }
     ],
     "specialty": [{
-        "id": 1,
-        "name": "json-server",
-        "doctor": "json-server"
-    }],
+            "dni": 1,
+            "name": "CARLOS BONILLA SALINAS",
+            "specialty": "Cirugia General"
+        },
+        {
+            "dni": 2,
+            "name": "FERNANDO A. CARBONELL",
+            "specialty": "Cirugia General"
+        },
+        {
+            "dni": 3,
+            "name": "GUILLERMO CASTILLO ROMEROo",
+            "specialty": "Cirugia General"
+        },
+        {
+            "dni": 4,
+            "name": "ORLANDO CUELLO LORDUY",
+            "specialty": "Cirugia General"
+        },
+        {
+            "dni": 5,
+            "name": "JORGE M. RINCON TRIVIÑO",
+            "specialty": "Cirugía plástica, maxilofacial y de mano"
+        },
+        {
+            "dni": 6,
+            "name": "JORGE ENRIQUE PERAZA BALLESTEROS",
+            "specialty": "Cirugía plástica, maxilofacial y de mano"
+        },
+        {
+            "dni": 7,
+            "name": "LUIS FELIPE RIVERO CARRILLO",
+            "specialty": "Cirugía plástica, maxilofacial y de mano"
+        },
+        {
+            "dni": 8,
+            "name": "CRISTOBAL SASTOQUE MELANI",
+            "specialty": "Cirugía plástica, maxilofacial y de mano"
+        },
+        {
+            "dni": 9,
+            "name": "FABIO HERMIDA DIAZ",
+            "specialty": " Cirugía ortopedica y traumatología"
+        },
+        {
+            "dni": 10,
+            "name": "EMILIANO ISAZA HENAO",
+            "specialty": " Cirugía ortopedica y traumatología"
+        },
+        {
+            "dni": 11,
+            "name": "NICOLAS KATTAN KATTAM",
+            "specialty": " Cirugía ortopedica y traumatología"
+        },
+        {
+            "dni": 12,
+            "name": "VALENTIN MALAGON CASTRO",
+            "specialty": " Cirugía ortopedica y traumatología"
+        },
+        {
+            "dni": 13,
+            "name": "MODESTO MARTINEZ TRUJILLO",
+            "specialty": " Cirugía ortopedica y traumatología"
+        },
+        {
+            "dni": 14,
+            "name": "ANCIZAR MARQUEZ VILLEGAS",
+            "specialty": " Cirugía ortopedica y traumatología"
+        },
+        {
+            "dni": 15,
+            "name": "ROBERTO VERGARA T.",
+            "specialty": "Ginecología y Obstetricia"
+        },
+        {
+            "dni": 16,
+            "name": "FERNANDO NAVAS URIBE",
+            "specialty": "Ginecología y Obstetricia"
+        },
+        {
+            "dni": 17,
+            "name": "LUIS CARLOS URIBE",
+            "specialty": "Ginecología y Obstetricia"
+        }
+    ],
     "surgery": [{
-        "id": 1,
-        "name": "json-server",
-        "cost": "json-server"
+        "dni": 1,
+        "cost": 1234,
+        "specialty": "Cirugia General"
+    }, {
+        "dni": 2,
+        "cost": 1235,
+        "specialty": "Cirugía plástica, maxilofacial y de mano"
+    }, {
+        "dni": 3,
+        "cost": 1236,
+        "specialty": "Ginecología y Obstetricia"
     }],
     "posts": [{
         "id": 1,
