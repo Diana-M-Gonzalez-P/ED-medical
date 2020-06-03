@@ -1,0 +1,26 @@
+.doctor {
+    margin: 3rem 0;
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        .doctor__img {
+            width: 40%;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .doctor__form {
+            width: 55%;
+            mat-form-field {
+                width: 100%;
+            }
+            button {
+                margin-top: 2rem;
+            }
+        }
+    }
+    &__result {
+        margin: 2rem 0;
+    }
+}
