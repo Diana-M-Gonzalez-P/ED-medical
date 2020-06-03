@@ -1,3 +1,4 @@
+@import '../../../scss/viewport.scss';
 .card {
     display: flex;
     flex-wrap: wrap;
@@ -7,6 +8,13 @@
         flex: 1 1 45%;
         margin-right: 2rem;
         margin-bottom: 2rem;
+        @include mobile {
+            width: 100%;
+            margin-right: 0;
+        }
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
         .card__image {
             width: 150px;
             height: 150px;

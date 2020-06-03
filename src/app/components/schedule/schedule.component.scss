@@ -1,3 +1,4 @@
+@import '../../../scss/viewport.scss';
 .schedule {
     margin: 3rem 0;
     &__content {
@@ -5,6 +6,9 @@
         flex-wrap: wrap;
         .schedule__img {
             width: 40%;
+            @include mobile {
+                width: 100%;
+            }
             img {
                 width: 100%;
                 height: auto;
@@ -12,6 +16,9 @@
         }
         .schedule__form {
             width: 55%;
+            @include mobile {
+                width: 100%;
+            }
             mat-form-field {
                 width: 100%;
             }

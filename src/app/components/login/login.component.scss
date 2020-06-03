@@ -1,4 +1,5 @@
 @import '../../../scss/variables.scss';
+@import '../../../scss/viewport.scss';
 .login {
     width: 100vw;
     height: 100vh;
@@ -12,16 +13,22 @@
         transform: translate(-50%, -50%);
         padding: 3rem 2rem;
         text-align: center;
+        @include mobile {
+            width: 90%;
+        }
         mat-card-header {
             position: relative;
             display: flex;
             justify-content: center;
             .login__img {
                 position: absolute;
-                width: 15%;
-                top: -7rem;
+                width: 60px;
+                top: -90px;
                 left: 50%;
                 transform: translateX(-50%);
+                @include mobile {
+                    top: -75px;
+                }
                 img {
                     width: 100%;
                     height: auto;

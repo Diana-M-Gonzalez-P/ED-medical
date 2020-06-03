@@ -3,6 +3,7 @@ import { ApiService } from 'src/app/services/api.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MyErrorStateMatcher } from 'src/app/class/error';
 import { SurgeryModel } from '../../model/surgery.model';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-surgery',
@@ -21,6 +22,7 @@ export class SurgeryComponent implements OnInit {
 
   constructor(
     private api: ApiService,
+    private location: Location,
     private formBuilder: FormBuilder
   ) { }
 
@@ -33,6 +35,10 @@ export class SurgeryComponent implements OnInit {
   }
 
   get formSu() { return this.formSurgery.controls; }
+
+  goBack() {
+    this.location.back();
+  }
 
   getInfoUser(){
     this.api.getUser()

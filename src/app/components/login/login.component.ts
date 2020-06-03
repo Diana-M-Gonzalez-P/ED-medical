@@ -44,8 +44,10 @@ export class LoginComponent implements OnInit {
       if ( this.user.dni === resp['dni'] && this.user.password === resp['password']){
         this.router.navigate( ['/home'] );
       } else {
-        this.respond = 'Cedula o clave incorrectas';
+        this.respond = 'Cédula o clave incorrectas';
       }
+    }, error => {
+      this.respond = 'No se pudo iniciar sesión';
     });
   }
 }

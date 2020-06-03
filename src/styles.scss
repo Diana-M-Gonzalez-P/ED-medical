@@ -34,23 +34,35 @@ $app-davinci-theme: mat-light-theme($app-davinci-primary, $app-davinci-accent, $
     color: $blue;
 }
 
-html,
-body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    font-family: 'Cabin', sans-serif;
+html {
     font-size: 16px;
-    .container {
-        width: 85%;
-        margin: auto;
+    @include mobile {
+        font-size: 10px;
     }
-    .view-navbar {
-        display: block;
-    }
-    .hidden-navbar {
-        display: none;
+    body {
+        position: relative;
+        height: auto;
+        min-height: 100vh;
+        width: 100vw;
+        margin: 0;
+        font-family: 'Cabin', sans-serif;
+        .container {
+            width: 85%;
+            margin: auto;
+            padding-bottom: 10rem;
+        }
+        .view-navbar {
+            display: block;
+        }
+        .hidden-navbar {
+            display: none;
+        }
+        .return {
+            margin-bottom: 2rem;
+            cursor: pointer;
+            i {
+                font-size: 2rem;
+            }
+        }
     }
 }

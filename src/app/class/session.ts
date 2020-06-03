@@ -1,12 +1,12 @@
 export class Session {
     validateUser(router) {
         if (!localStorage.getItem('token')) {
-            router.navigateByUrl('/login');
+            router.navigateByUrl('');
         }
       }
     validateLogin(router) {
         if (!localStorage.getItem('token')) {
-            router.navigateByUrl('/login');
+            router.navigateByUrl('');
         } else {
         }
     }

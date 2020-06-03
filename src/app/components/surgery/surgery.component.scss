@@ -1,3 +1,4 @@
+@import '../../../scss/viewport.scss';
 .surgery {
     margin: 3rem 0;
     &__content {
@@ -5,6 +6,9 @@
         flex-wrap: wrap;
         .surgery__img {
             width: 40%;
+            @include mobile {
+                width: 100%;
+            }
             img {
                 width: 100%;
                 height: auto;
@@ -13,6 +17,11 @@
         .surgery__form {
             width: 55%;
             margin-left: 2rem;
+            @include mobile {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 2rem;
+            }
             mat-form-field {
                 width: 100%;
             }
@@ -23,6 +32,11 @@
     }
     &__result {
         margin: 2rem 0;
+        @include mobile {
+            p {
+                font-size: 1.1rem;
+            }
+        }
         .surgery__cost {
             margin-left: 3rem;
             font-size: 1rem;

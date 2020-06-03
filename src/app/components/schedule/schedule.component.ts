@@ -6,6 +6,7 @@ import { AppointmentModel } from '../../model/appointment.model';
 import { MyErrorStateMatcher } from 'src/app/class/error';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -27,6 +28,7 @@ export class ScheduleComponent implements OnInit {
 
   constructor(
     private api: ApiService,
+    private location: Location,
     private formBuilder: FormBuilder,
     private router: Router,
   ) { }
@@ -45,6 +47,10 @@ export class ScheduleComponent implements OnInit {
   }
 
   get formS() { return this.formSchedule.controls; }
+
+  goBack() {
+    this.location.back();
+  }
 
   getInfoUser(){
     this.api.getUser()

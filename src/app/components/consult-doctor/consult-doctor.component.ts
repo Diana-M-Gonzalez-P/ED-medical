@@ -5,6 +5,7 @@ import { DoctorModel } from '../../model/doctor.model';
 import { MyErrorStateMatcher } from 'src/app/class/error';
 import { Session } from 'src/app/class/session';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-consult-doctor',
@@ -25,6 +26,7 @@ export class ConsultDoctorComponent implements OnInit {
 
   constructor(
     private api: ApiService,
+    private location: Location,
     private formBuilder: FormBuilder,
     private router: Router
   ) { }
@@ -39,6 +41,10 @@ export class ConsultDoctorComponent implements OnInit {
   }
 
   get formD() { return this.formDoctor.controls; }
+
+  goBack() {
+    this.location.back();
+  }
 
   getInfoUser(){
     this.api.getUser()

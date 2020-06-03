@@ -6,6 +6,7 @@ import { MyErrorStateMatcher } from 'src/app/class/error';
 import { UserModel } from 'src/app/model/user.model';
 import Swal from 'sweetalert2';
 import { Session } from 'src/app/class/session';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-appointment-home',
@@ -27,6 +28,7 @@ export class AppointmentHomeComponent implements OnInit {
 
   constructor(
     private api: ApiService,
+    private location: Location,
     private formBuilder: FormBuilder,
     private router: Router,
   ) { }
@@ -45,6 +47,10 @@ export class AppointmentHomeComponent implements OnInit {
   }
 
   get formH() { return this.formHome.controls; }
+
+  goBack() {
+    this.location.back();
+  }
 
   getInfoUser(){
     this.api.getUser()

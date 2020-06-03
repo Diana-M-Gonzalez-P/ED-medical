@@ -2,6 +2,9 @@
 @import 'variables.scss';
 @import 'viewport.scss';
 .mat-typography {
+    @include mobile {
+        font-size: 12px;
+    }
     h1 {
         font-size: 3rem;
         font-weight: bold;
