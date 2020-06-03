@@ -19,7 +19,7 @@ export class ScheduleComponent implements OnInit {
   dni: string;
   specialty: object;
   doctors: object;
-
+  toDay = new Date();
   appointment = new AppointmentModel();
   session = new Session();
   formSchedule: FormGroup;
@@ -37,7 +37,7 @@ export class ScheduleComponent implements OnInit {
     this.getInfoUser();
     this.getMedicalGeneral();
     this.formSchedule = this.formBuilder.group({
-      toDay: [ {value: new Date(), disabled: true}, [Validators.required]],
+      toDay: [ {value: this.toDay, disabled: true}],
       specialty: ['', [Validators.required]],
       doctor: ['', [Validators.required]],
       dateProgram: ['', [Validators.required]]
@@ -70,24 +70,37 @@ export class ScheduleComponent implements OnInit {
     });
   }
 
-  save() {
+  save( form ) {
     this.appointment.toDay = this.formSchedule.get('toDay').value;
     this.appointment.specialty = this.formSchedule.get('specialty').value;
     this.appointment.doctor = this.formSchedule.get('doctor').value;
     this.appointment.program = this.formSchedule.get('dateProgram').value;
 
-    this.api.postAppointment(this.appointment)
-    .subscribe( resp => {
-        console.log(resp);
+    console.log(this.appointment.toDay);
+
+    if ( form.valid ) {
+      this.api.postAppointment(this.appointment)
+      .subscribe( resp => {
+          console.log(resp);
+          Swal.fire({
+            icon: 'success',
+            title: 'Exito',
+            text: 'Su cita fue agendada con éxito'
+          });
+      }, error => {
         Swal.fire({
-          icon: 'success',
-          title: 'Exito',
-          text: 'Su cita fue agendada con éxito'
+          icon: 'error',
+          title: 'Error',
+          text: 'No se puedo agendar su cita fue agendada'
         });
-        setTimeout(() => {
-          this.formSchedule.reset();
-        }, 3000);
-    });
+      });
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Debe llenar todo el formulario'
+      });
+    }
   }
 
 }

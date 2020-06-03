@@ -9,7 +9,7 @@
             <img src="assets/img/image3.png" alt="image">
         </div>
         <div class="schedule__form">
-            <form action="" class="fields-container" [formGroup]="formSchedule">
+            <form action="" class="fields-container" [formGroup]="formSchedule" (ngSubmit)="save( form )" #form="ngForm">
                 <mat-form-field color="accent">
                     <mat-label>Fecha de hoy:</mat-label>
                     <input matInput [matDatepicker]="picker" [errorStateMatcher]="matcher" formControlName="toDay">
@@ -35,13 +35,13 @@
                     </mat-error>
                 </mat-form-field>
                 <mat-form-field color="accent">
-                    <input placeholder="Fecha a programar" matInput [matDatepicker]="dateCite" (click)="dateCite.open()" formControlName="dateProgram" [errorStateMatcher]="matcher" [ngClass]="{ 'is-invalid':  formS.dateProgram.errors }">
+                    <input placeholder="Fecha a programar" [min]="toDay" matInput [matDatepicker]="dateCite" (click)="dateCite.open()" formControlName="dateProgram" [errorStateMatcher]="matcher" [ngClass]="{ 'is-invalid':  formS.dateProgram.errors }">
                     <mat-datepicker #dateCite></mat-datepicker>
                     <mat-error *ngIf="!!formS['dateProgram'].errors">
                         <mat-error *ngIf="!!formS['dateProgram'].errors.required">Este campo es requerido</mat-error>
                     </mat-error>
                 </mat-form-field>
-                <button mat-raised-button (click)="save()">Aceptar</button>
+                <button mat-raised-button>Aceptar</button>
             </form>
         </div>
     </div>
