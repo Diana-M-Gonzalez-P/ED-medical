@@ -17,6 +17,9 @@ export class ApiService {
   private urlMedicalGeneral = this.urlPublic + 'medi-general';
   private urlDoctors = this.urlPublic + 'doctor';
   private urlAppointment = this.urlPublic + 'appointment';
+  private urlDoctorHome = this.urlPublic + 'docotor-home';
+  private urlSpecialty = this.urlPublic + 'specialty';
+  private urlSurgery = this.urlPublic + 'surgery';
 
   constructor( private http: HttpClient) {
   }
@@ -66,7 +69,18 @@ export class ApiService {
     return this.http.get(this.urlDoctors);
   }
 
+  getSpecialty() {
+    return this.http.get(this.urlSpecialty);
+  }
+
+  getSurgery() {
+    return this.http.get(this.urlSurgery);
+  }
+
   postAppointment( appointment: AppointmentModel){
     return this.http.post(this.urlAppointment, appointment);
+  }
+  postDoctorHome( user: UserModel){
+    return this.http.post(this.urlDoctorHome, user);
   }
 }
