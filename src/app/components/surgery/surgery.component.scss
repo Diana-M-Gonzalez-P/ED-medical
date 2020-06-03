@@ -1,0 +1,32 @@
+.surgery {
+    margin: 3rem 0;
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        .surgery__img {
+            width: 40%;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .surgery__form {
+            width: 55%;
+            margin-left: 2rem;
+            mat-form-field {
+                width: 100%;
+            }
+            button {
+                margin-top: 2rem;
+            }
+        }
+    }
+    &__result {
+        margin: 2rem 0;
+        .surgery__cost {
+            margin-left: 3rem;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+}

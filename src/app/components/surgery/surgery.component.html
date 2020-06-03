@@ -1,29 +1,32 @@
-<section class="doctor">
-    <div class="doctor__info">
+<section class="surgery">
+    <div class="surgery__info">
         <h2>Consultar Cirugias</h2>
-        <p>Nombre de usuario</p>
+        <p>{{name}}</p>
+        <p>CC {{dni}}</p>
     </div>
-    <div class="doctor__content">
-        <div class="doctor__img">
-            <img src="" alt="">
+    <div class="surgery__content">
+        <div class="surgery__img">
+            <img src="assets/img/image4.jpg" alt="image">
         </div>
-        <div class="doctor__form">
-            <form action="" class="fields-container">
+        <div class="surgery__form">
+            <form action="" class="fields-container" [formGroup]="formSurgery">
                 <mat-form-field>
                     <mat-label>Especialidad</mat-label>
-                    <mat-select disableRipple>
-                        <mat-option value="1">Option 1</mat-option>
-                        <mat-option value="2">Option 2</mat-option>
-                        <mat-option value="3">Option 3</mat-option>
+                    <mat-select disableRipple formControlName="surgery" [ngClass]="{ 'is-invalid':  formSu.surgery.errors }">
+                        <mat-option [value]="item.surgery" *ngFor="let item of arraySurgery ">{{item.surgery}}</mat-option>
                     </mat-select>
+                    <mat-error *ngIf="!!formSu['surgery'].errors">
+                        <mat-error *ngIf="!!formSu['surgery'].errors.required">Este campo es requerido</mat-error>
+                    </mat-error>
                 </mat-form-field>
-                <button>Consultar</button>
+                <button mat-raised-button (click)="searchSurgery()">Consultar</button>
             </form>
-            <div class="doctor__result">
-                <mat-list role="list">
-                    <mat-list-item role="listitem">Item 1</mat-list-item>
-                    <mat-list-item role="listitem">Item 2</mat-list-item>
-                    <mat-list-item role="listitem">Item 3</mat-list-item>
+            <div class="surgery__result">
+                <mat-list role="list" *ngFor="let cost of listCost">
+                    <mat-list-item role="listitem">
+                        <p>{{cost.surgery}}</p>
+                        <p class="surgery__cost">$ {{cost.cost}}</p>
+                    </mat-list-item>
                 </mat-list>
             </div>
         </div>

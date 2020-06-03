@@ -1,213 +1,201 @@
 {
-  "user": {
-    "token": "1234userJuan",
-    "dni": "1049634958",
-    "name": "Juan David",
-    "last-name": "Perez Lopez",
-    "email": "juan@email.com",
-    "direction": "calle34 #05 -13",
-    "tel": "303948573",
-    "password": "a1234",
-    "health": ""
-  },
-  "services": [
-    {
-      "id": 1,
-      "type": "schedule",
-      "name": "Agenda tu cita"
+    "user": {
+        "token": "1234userJuan",
+        "dni": "1049634958",
+        "name": "Juan David",
+        "last-name": "Perez Lopez",
+        "email": "juan@email.com",
+        "direction": "calle34 #05 -13",
+        "tel": "303948573",
+        "password": "a1234",
+        "health": ""
     },
-    {
-      "id": 2,
-      "type": "doctor",
-      "name": "Consultar de Especialistas"
-    },
-    {
-      "id": 3,
-      "type": "surgery",
-      "name": "Consultar de Cirugias"
-    },
-    {
-      "id": 4,
-      "type": "doctor-home",
-      "name": "Medico en Casa"
+    "services": [{
+            "id": 1,
+            "type": "schedule",
+            "name": "Agenda tu cita"
+        },
+        {
+            "id": 2,
+            "type": "doctor",
+            "name": "Consultar de Especialistas"
+        },
+        {
+            "id": 3,
+            "type": "surgery",
+            "name": "Consultar de Cirugias"
+        },
+        {
+            "id": 4,
+            "type": "doctor-home",
+            "name": "Medico en Casa"
+        }
+    ],
+    "appointment": [{
+            "id": "",
+            "toDay": "",
+            "specialty": "",
+            "doctor": "",
+            "program": ""
+        },
+        {
+            "toDay": "2020-06-03T15:42:15.222Z",
+            "specialty": 1,
+            "doctor": 1235,
+            "program": "2020-06-03T05:00:00.000Z",
+            "id": "zFCYa5P"
+        }
+    ],
+    "docotor-home": [{
+        "id": "",
+        "toDay": "",
+        "specialty": "",
+        "doctor": "",
+        "program": ""
+    }],
+    "medi-general": [{
+            "id": 1,
+            "name": "Medicina General"
+        },
+        {
+            "id": 2,
+            "name": "Cita Prioritaria"
+        },
+        {
+            "id": 3,
+            "name": "Pyp"
+        }
+    ],
+    "doctor": [{
+            "dni": 1234,
+            "name": "Ana Lopez"
+        },
+        {
+            "dni": 1235,
+            "name": "Juan Ramirez"
+        },
+        {
+            "dni": 1236,
+            "name": "Luis Gonzalez"
+        },
+        {
+            "dni": 1237,
+            "name": "Olga Prieto"
+        }
+    ],
+    "specialty": [{
+            "dni": 1,
+            "name": "CARLOS BONILLA SALINAS",
+            "specialty": "Cirugia General"
+        },
+        {
+            "dni": 2,
+            "name": "FERNANDO A. CARBONELL",
+            "specialty": "Cirugia General"
+        },
+        {
+            "dni": 3,
+            "name": "GUILLERMO CASTILLO ROMEROo",
+            "specialty": "Cirugia General"
+        },
+        {
+            "dni": 4,
+            "name": "ORLANDO CUELLO LORDUY",
+            "specialty": "Cirugia General"
+        },
+        {
+            "dni": 5,
+            "name": "JORGE M. RINCON TRIVIÑO",
+            "specialty": "Cirugía plástica, maxilofacial y de mano"
+        },
+        {
+            "dni": 6,
+            "name": "JORGE ENRIQUE PERAZA BALLESTEROS",
+            "specialty": "Cirugía plástica, maxilofacial y de mano"
+        },
+        {
+            "dni": 7,
+            "name": "LUIS FELIPE RIVERO CARRILLO",
+            "specialty": "Cirugía plástica, maxilofacial y de mano"
+        },
+        {
+            "dni": 8,
+            "name": "CRISTOBAL SASTOQUE MELANI",
+            "specialty": "Cirugía plástica, maxilofacial y de mano"
+        },
+        {
+            "dni": 9,
+            "name": "FABIO HERMIDA DIAZ",
+            "specialty": " Cirugía ortopedica y traumatología"
+        },
+        {
+            "dni": 10,
+            "name": "EMILIANO ISAZA HENAO",
+            "specialty": " Cirugía ortopedica y traumatología"
+        },
+        {
+            "dni": 11,
+            "name": "NICOLAS KATTAN KATTAM",
+            "specialty": " Cirugía ortopedica y traumatología"
+        },
+        {
+            "dni": 12,
+            "name": "VALENTIN MALAGON CASTRO",
+            "specialty": " Cirugía ortopedica y traumatología"
+        },
+        {
+            "dni": 13,
+            "name": "MODESTO MARTINEZ TRUJILLO",
+            "specialty": " Cirugía ortopedica y traumatología"
+        },
+        {
+            "dni": 14,
+            "name": "ANCIZAR MARQUEZ VILLEGAS",
+            "specialty": " Cirugía ortopedica y traumatología"
+        },
+        {
+            "dni": 15,
+            "name": "ROBERTO VERGARA T.",
+            "specialty": "Ginecología y Obstetricia"
+        },
+        {
+            "dni": 16,
+            "name": "FERNANDO NAVAS URIBE",
+            "specialty": "Ginecología y Obstetricia"
+        },
+        {
+            "dni": 17,
+            "name": "LUIS CARLOS URIBE",
+            "specialty": "Ginecología y Obstetricia"
+        }
+    ],
+    "surgery": [{
+            "dni": 1,
+            "cost": 1234,
+            "surgery": "Cirugia General"
+        },
+        {
+            "dni": 2,
+            "cost": 1235,
+            "surgery": "Cirugía plástica, maxilofacial y de mano"
+        },
+        {
+            "dni": 3,
+            "cost": 1236,
+            "surgery": "Ginecología y Obstetricia"
+        }
+    ],
+    "posts": [{
+        "id": 1,
+        "title": "json-server",
+        "author": "typicode"
+    }],
+    "comments": [{
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+    }],
+    "profile": {
+        "name": "typicode"
     }
-  ],
-  "appointment": [
-    {
-      "id": "",
-      "toDay": "",
-      "specialty": "",
-      "doctor": "",
-      "program": ""
-    },
-    {
-      "toDay": "2020-06-03T15:42:15.222Z",
-      "specialty": 1,
-      "doctor": 1235,
-      "program": "2020-06-03T05:00:00.000Z",
-      "id": "zFCYa5P"
-    }
-  ],
-  "docotor-home": [
-    {
-      "id": "",
-      "toDay": "",
-      "specialty": "",
-      "doctor": "",
-      "program": ""
-    }
-  ],
-  "medi-general": [
-    {
-      "id": 1,
-      "name": "Medicina General"
-    },
-    {
-      "id": 2,
-      "name": "Cita Prioritaria"
-    },
-    {
-      "id": 3,
-      "name": "Pyp"
-    }
-  ],
-  "doctor": [
-    {
-      "dni": 1234,
-      "name": "Ana Lopez"
-    },
-    {
-      "dni": 1235,
-      "name": "Juan Ramirez"
-    },
-    {
-      "dni": 1236,
-      "name": "Luis Gonzalez"
-    },
-    {
-      "dni": 1237,
-      "name": "Olga Prieto"
-    }
-  ],
-  "specialty": [
-    {
-      "dni": 1,
-      "name": "CARLOS BONILLA SALINAS",
-      "specialty": "Cirugia General"
-    },
-    {
-      "dni": 2,
-      "name": "FERNANDO A. CARBONELL",
-      "specialty": "Cirugia General"
-    },
-    {
-      "dni": 3,
-      "name": "GUILLERMO CASTILLO ROMEROo",
-      "specialty": "Cirugia General"
-    },
-    {
-      "dni": 4,
-      "name": "ORLANDO CUELLO LORDUY",
-      "specialty": "Cirugia General"
-    },
-    {
-      "dni": 5,
-      "name": "JORGE M. RINCON TRIVIÑO",
-      "specialty": "Cirugía plástica, maxilofacial y de mano"
-    },
-    {
-      "dni": 6,
-      "name": "JORGE ENRIQUE PERAZA BALLESTEROS",
-      "specialty": "Cirugía plástica, maxilofacial y de mano"
-    },
-    {
-      "dni": 7,
-      "name": "LUIS FELIPE RIVERO CARRILLO",
-      "specialty": "Cirugía plástica, maxilofacial y de mano"
-    },
-    {
-      "dni": 8,
-      "name": "CRISTOBAL SASTOQUE MELANI",
-      "specialty": "Cirugía plástica, maxilofacial y de mano"
-    },
-    {
-      "dni": 9,
-      "name": "FABIO HERMIDA DIAZ",
-      "specialty": " Cirugía ortopedica y traumatología"
-    },
-    {
-      "dni": 10,
-      "name": "EMILIANO ISAZA HENAO",
-      "specialty": " Cirugía ortopedica y traumatología"
-    },
-    {
-      "dni": 11,
-      "name": "NICOLAS KATTAN KATTAM",
-      "specialty": " Cirugía ortopedica y traumatología"
-    },
-    {
-      "dni": 12,
-      "name": "VALENTIN MALAGON CASTRO",
-      "specialty": " Cirugía ortopedica y traumatología"
-    },
-    {
-      "dni": 13,
-      "name": "MODESTO MARTINEZ TRUJILLO",
-      "specialty": " Cirugía ortopedica y traumatología"
-    },
-    {
-      "dni": 14,
-      "name": "ANCIZAR MARQUEZ VILLEGAS",
-      "specialty": " Cirugía ortopedica y traumatología"
-    },
-    {
-      "dni": 15,
-      "name": "ROBERTO VERGARA T.",
-      "specialty": "Ginecología y Obstetricia"
-    },
-    {
-      "dni": 16,
-      "name": "FERNANDO NAVAS URIBE",
-      "specialty": "Ginecología y Obstetricia"
-    },
-    {
-      "dni": 17,
-      "name": "LUIS CARLOS URIBE",
-      "specialty": "Ginecología y Obstetricia"
-    }
-  ],
-  "surgery": [
-    {
-      "dni": 1,
-      "cost": 1234,
-      "specialty": "Cirugia General"
-    },
-    {
-      "dni": 2,
-      "cost": 1235,
-      "specialty": "Cirugía plástica, maxilofacial y de mano"
-    },
-    {
-      "dni": 3,
-      "cost": 1236,
-      "specialty": "Ginecología y Obstetricia"
-    }
-  ],
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
 }

@@ -26,8 +26,6 @@ export class ConsultDoctorComponent implements OnInit {
     private formBuilder: FormBuilder
   ) { }
 
-  get formD() { return this.formDoctor.controls; }
-
   ngOnInit(): void {
     this.getInfoUser();
     this.listSpecialty();
@@ -35,6 +33,8 @@ export class ConsultDoctorComponent implements OnInit {
       specialty: ['', [Validators.required]],
     });
   }
+
+  get formD() { return this.formDoctor.controls; }
 
   getInfoUser(){
     this.api.getUser()

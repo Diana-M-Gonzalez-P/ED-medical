@@ -64,3 +64,11 @@ mat-calendar-header {
         }
     }
 }
+
+mat-list {
+    mat-list-item {
+        .mat-list-item-content {
+            font-family: 'Cabin', sans-serif;
+        }
+    }
+}
